@@ -5,7 +5,10 @@ F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\nunit.eng
 F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\nunit.engine.core.dll
 F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\BTCN06.Test.dll
 F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\BTCN06.Test.pdb
+F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\BTCN06.exe
 F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\nunit.framework.dll
+F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\BTCN06.pdb
+F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\BTCN06.exe.config
 F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\nunit.framework.pdb
 F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\bin\Release\nunit.framework.xml
 F:\HK7_20_21\KiemThuPhanMem\Assignments\BTCN06\BTCN06.Test\obj\Release\BTCN06.Test.csprojAssemblyReference.cache

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace BTCN06
 {
@@ -28,34 +29,39 @@ namespace BTCN06
 
         public double chuVi()
         {
-            return (a.khoangCachDen(b) + b.khoangCachDen(c) + c.khoangCachDen(a));
+            if (loaiTamGiac() != 0)
+            {
+                return (a.khoangCachDen(b) + b.khoangCachDen(c) + c.khoangCachDen(a));
+            }
+            return 0;
         }
 
+        // Loai tam giac
+        // 0: Khong phai tam giac
+        // 1: Tam giac thuong
+        // 2: Tam giac deu
+        // 3: Tam giac can
+        // 4: Tam giac vuong
+        // 5: Tam giac vuong can
         public int loaiTamGiac()
         {
-            // Loai tam giac
-            // 0: Khong phai tam giac
-            // 1: Tam giac thuong
-            // 2: Tam giac deu
-            // 3: Tam giac can
-            // 4: Tam giac vuong
-            // 5: Tam giac vuong can
+            double epsilon = 0.000001;
 
             double AB = a.khoangCachDen(b);
             double BC = b.khoangCachDen(c);
             double CA = c.khoangCachDen(a);
 
-            if (AB + BC < CA || AB + CA < BC || BC + CA < AB)
+            if (AB + BC <= CA || AB + CA <= BC || BC + CA <= AB)
             {
                 return 0;
             }
-            else if (AB == BC && BC == CA)
+            else if (Math.Abs(AB - BC) <= epsilon && Math.Abs(BC - CA) <= epsilon)
             {
                 return 2;
             }
-            else if (AB == BC || BC == CA || CA == AB)
+            else if (Math.Abs(AB - BC) <= epsilon || Math.Abs(BC - CA) <= epsilon || Math.Abs(CA - AB) <= epsilon)
             {
-                if (AB * AB + BC * BC == CA * CA || AB * AB + CA * CA == BC * BC || CA * CA + BC * BC == AB * AB)
+                if (Math.Abs(AB * AB + BC * BC - CA * CA) <= epsilon || Math.Abs(AB * AB + CA * CA - BC * BC) <= epsilon || Math.Abs(CA * CA + BC * BC - AB * AB) <= epsilon)
                 {
                     return 5;
                 }
@@ -64,7 +70,7 @@ namespace BTCN06
                     return 3;
                 }
             }
-            else if (AB * AB + BC * BC == CA * CA || AB * AB + CA * CA == BC * BC || CA * CA + BC * BC == AB * AB)
+            else if (Math.Abs(AB * AB + BC * BC - CA * CA) <= epsilon || Math.Abs(AB * AB + CA * CA - BC * BC) <= epsilon || Math.Abs(CA * CA + BC * BC - AB * AB) <= epsilon)
             {
                 return 4;
             }

@@ -48,14 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Diem.cs" />
     <Compile Include="DiemTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TamGiac.cs" />
     <Compile Include="TamGiacTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BTCN06\BTCN06.csproj">
+      <Project>{eb65bbeb-6608-4f69-9743-c3af3ece3d0b}</Project>
+      <Name>BTCN06</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

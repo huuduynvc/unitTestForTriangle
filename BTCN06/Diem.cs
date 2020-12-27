@@ -23,7 +23,7 @@ namespace BTCN06
         public Diem(double a, double b)
         {
             x = a;
-            Y = b;
+            y = b;
         }
 
         public double khoangCachDen(Diem A)

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using System.Diagnostics;
+using BTCN06;
 
 namespace BTCN06.Test
 {
